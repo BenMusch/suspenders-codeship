@@ -1,6 +1,6 @@
 - name: migrate
   service: test
-  command: bundle exec rails db:migrate
+  command: bin/wait_for_db && bundle exec rails db:create db:migrate
 - name: spec
   service: test
   command: ./bin/rake

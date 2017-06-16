@@ -1,5 +1,5 @@
 #!/bin/sh
-# wait-for-postgres
+# wait_for_db
 set -e
 
 TIMEOUT=60
