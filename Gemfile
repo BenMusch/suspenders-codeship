@@ -21,6 +21,7 @@ gem "suspenders"
 gem "title"
 gem "uglifier"
 gem "tzinfo"
+gem "tzinfo-data"
 
 group :development do
   gem "listen"
