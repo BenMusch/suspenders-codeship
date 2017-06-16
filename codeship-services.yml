@@ -1,0 +1,17 @@
+test:
+  build:
+    image: codeship
+    dockerfile: Dockerfile
+  links:
+    - postgres
+  environment:
+    DATABASE_URL: postgres://codeship@postgres/codeship_test
+    RAILS_ENV: test
+    ENV: test
+  cached: true
+postgres:
+  image: postgres:9.5.5
+  environment:
+    POSTGRES_USER: codeship
+    POSTGRES_DB: codeship_test
+  cached: true

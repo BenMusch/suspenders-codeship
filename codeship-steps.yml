@@ -1,0 +1,6 @@
+- name: migrate
+  service: test
+  command: bundle exec rails db:migrate
+- name: spec
+  service: test
+  command: ./bin/rake
