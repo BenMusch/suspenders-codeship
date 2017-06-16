@@ -1,6 +1,9 @@
+- name: wait for database
+  service: test
+  command: ./bin/wait_for_db
 - name: migrate
   service: test
-  command: bin/wait_for_db && bundle exec rails db:create db:migrate
+  command: ./bin/setup
 - name: spec
   service: test
   command: ./bin/rake
